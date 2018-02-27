@@ -5,3 +5,7 @@
   <span><h5 class =center> <%= index + 1%>
   <%= page.title %></h5></span> </br>
 <% end %>
+<div class= center>
+<button class="btn-large black white-text"><%= link_to 'Create New Item', new_page_path %></button>
+<button class="btn-large black white-text"><%= link_to 'Edit Items', pages_path %></button>
+</div>
