@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     @pages = Page.all
   end
 
+  def home
+    @pages = Page.all
+  end
+
   #GET /pages/:id
   def show
     @page = Page.find(params[:id])
@@ -29,7 +33,7 @@ class PagesController < ApplicationController
       render :new
     end
   end
- 
+
   # PUT / PATCH /pages/:id
   def update
     @page = Page.find(params[:id])
@@ -52,4 +56,3 @@ class PagesController < ApplicationController
       params.require(:page).permit(:body, :author, :title)
     end
 end
-
